@@ -89,7 +89,27 @@ const earsUpTL = new timeline({
 add(
 to(ears[0], EAR_SPEED, {
   rotation: 6 })).
+  
+// Using a Promise object
+liff
+  .init({
+    liffId: " 1653779308-Ak9E9l0o" // use own liffId
+  })
+  .then(() => {
+    // Start to use liff's api
+  })
+  .catch((err: LiffError) => {
+    // Error happens during initialization
+    console.log(err.code, err.message);
+  });
 
+  liff.getProfile()
+  .then(profile => {
+    const name = profile.displayName
+  })
+  .catch((err) => {
+    console.log('error', err);
+  })
 
 add(to(ears[1], EAR_SPEED, { rotation: -6 }), 0);
 /**
